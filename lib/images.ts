@@ -112,7 +112,7 @@ export const travelGuideImages = {
 export const blogImages: Record<string, string> = {
   "1": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200",
   "2": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200",
-  "3": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200",
+  "3": "https://legacy.iguzzini.com/getmedia/70045b18-ff1b-4a9f-9535-29a6d23a2f77/1?width=1500&height=1023",
   "4": "https://cdn-imgix.headout.com/media/images/d6ffb61fb65aeaa148d2e6c314dab650-21294-porto-entry--tickets-for-fc-porto-museum-and-stadium-tour-01.jpg?auto=format&w=702.4499999999999&h=401.4&q=90&ar=7%3A4&crop=faces&fit=crop",
   "5": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?q=80&w=1200",
   "6": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200",
