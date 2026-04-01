@@ -110,7 +110,7 @@ export const travelGuideImages = {
 // ─── Blog Post Images ─────────────────────────────────────────────────────────
 
 export const blogImages: Record<string, string> = {
-  "1": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200",
+  "1": "https://upload.wikimedia.org/wikipedia/commons/4/44/Stade_de_Lusail_match_Brazil_vs_Serbia.jpg",
   "2": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200",
   "3": "https://legacy.iguzzini.com/getmedia/70045b18-ff1b-4a9f-9535-29a6d23a2f77/1?width=1500&height=1023",
   "4": "https://cdn-imgix.headout.com/media/images/d6ffb61fb65aeaa148d2e6c314dab650-21294-porto-entry--tickets-for-fc-porto-museum-and-stadium-tour-01.jpg?auto=format&w=702.4499999999999&h=401.4&q=90&ar=7%3A4&crop=faces&fit=crop",
@@ -134,7 +134,7 @@ export const aboutImages = {
   gallery: [
     "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=600",
     "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600",
-    "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a8?q=80&w=600",
+    "https://cdn-imgix.headout.com/media/images/d6ffb61fb65aeaa148d2e6c314dab650-21294-porto-entry--tickets-for-fc-porto-museum-and-stadium-tour-01.jpg?auto=format&w=702.4499999999999&h=401.4&q=90&ar=7%3A4&crop=faces&fit=crop",
     "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600",
   ],
 } as const;

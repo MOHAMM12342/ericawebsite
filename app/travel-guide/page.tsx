@@ -168,49 +168,6 @@ export default function TravelGuidePage() {
         </div>
       </section>
 
-      {/* Metro Guide */}
-      <section className="bg-[#F3F4F6] px-6 md:px-20 py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <div>
-            <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-4 tracking-tight">
-              Doha Metro Guide
-            </h2>
-            <p className="text-[#6B7280] mb-6 leading-relaxed">
-              The Doha Metro is the fastest way to travel between stadiums.
-              Three lines cover all major destinations:
-            </p>
-
-            <div className="space-y-4 mb-6">
-              {metroLines.map((line) => (
-                <div key={line.name} className="flex items-center gap-3">
-                  <div className={`w-4 h-4 rounded-full ${line.color}`} />
-                  <div>
-                    <span className="font-semibold text-[#0D0E14]">{line.name}:</span>{" "}
-                    <span className="text-[#6B7280]">
-                      {line.description}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-sm text-[#6B7280]">
-              Operating hours: 6:00 AM - 11:00 PM (extended on event days)
-            </p>
-          </div>
-
-          <div className="relative aspect-video rounded-xl overflow-hidden">
-            <Image
-              src={travelGuideImages.metro}
-              alt="Doha Metro"
-              fill
-              className="object-cover"
-              unoptimized
-            />
-          </div>
-        </div>
-      </section>
-
       {/* FAQs */}
       <section className="bg-white px-6 md:px-20 py-16">
         <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-8 text-center tracking-tight">
