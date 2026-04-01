@@ -13,9 +13,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
-import { Hero } from "@/components/hero";
-import { Button } from "@/components/ui/button";
-import { heroImages, travelGuideImages } from "@/lib/images";
+import { travelGuideImages } from "@/lib/images";
 
 const temperatureData = [
   { month: "Nov", temp: 25 },
@@ -79,7 +77,7 @@ const faqs = [
   {
     question: "What is the best time to visit?",
     answer:
-      "The ideal time to visit is between November and March when temperatures are comfortable (18-25°C). Summer months (June-August) can be extremely hot with temperatures exceeding 45°C.",
+      "The ideal time to visit is between November and March when temperatures are comfortable (18-25C). Summer months (June-August) can be extremely hot with temperatures exceeding 45C.",
   },
   {
     question: "Can I visit the stadiums now?",
@@ -103,154 +101,164 @@ export default function TravelGuidePage() {
 
   return (
     <>
-      <Hero
-        title="Travel Guide"
-        subtitle="Everything you need to plan your trip to Qatar"
-        backgroundImage={heroImages.travelGuidePage}
-      />
+      {/* Hero Section */}
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-16">
+        <span className="inline-flex items-center bg-[#EEF2FF] border border-[#C7D4FB] text-[#1B4FF0] text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
+          Guide
+        </span>
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#0D0E14] mb-4">
+          Travel Guide
+        </h1>
+        <p className="text-base font-normal text-[#6B7280] leading-relaxed max-w-xl">
+          Everything you need to plan your trip to Qatar.
+        </p>
+      </section>
 
       {/* Best Time to Visit */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4 text-center">Best Time to Visit</h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
-            Qatar has a desert climate with hot summers and mild winters. The
-            ideal time to visit for stadium exploration is between November and
-            March, when temperatures are comfortable for outdoor activities.
-          </p>
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-12">
+        <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-4 text-center tracking-tight">
+          Best Time to Visit
+        </h2>
+        <p className="text-[#6B7280] text-center max-w-2xl mx-auto mb-8 leading-relaxed">
+          Qatar has a desert climate with hot summers and mild winters. The
+          ideal time to visit for stadium exploration is between November and
+          March, when temperatures are comfortable for outdoor activities.
+        </p>
 
-          {/* Temperature Chart */}
-          <div className="max-w-xl mx-auto">
-            <h3 className="text-lg font-semibold mb-4 text-center">
-              Average Temperatures
-            </h3>
-            <div className="flex items-end justify-center gap-4">
-              {temperatureData.map((data) => (
-                <div key={data.month} className="flex flex-col items-center">
-                  <span className="text-sm font-medium mb-2">{data.temp}C</span>
-                  <div
-                    className="w-12 bg-primary/80 rounded-t-md"
-                    style={{ height: `${data.temp * 4}px` }}
-                  />
-                  <span className="text-sm text-muted-foreground mt-2">
-                    {data.month}
-                  </span>
-                </div>
-              ))}
-            </div>
+        {/* Temperature Chart */}
+        <div className="max-w-xl mx-auto bg-white rounded-xl p-6">
+          <h3 className="text-lg font-bold text-[#0D0E14] mb-4 text-center">
+            Average Temperatures
+          </h3>
+          <div className="flex items-end justify-center gap-6">
+            {temperatureData.map((data) => (
+              <div key={data.month} className="flex flex-col items-center">
+                <span className="text-sm font-semibold text-[#0D0E14] mb-2">{data.temp}C</span>
+                <div
+                  className="w-12 bg-[#1B4FF0] rounded-t-md"
+                  style={{ height: `${data.temp * 4}px` }}
+                />
+                <span className="text-sm text-[#6B7280] mt-2 font-medium">
+                  {data.month}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Essential Tips */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Essential Tips</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tips.map((tip) => (
-              <div
-                key={tip.title}
-                className="bg-card rounded-xl p-6 shadow-sm border border-border"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <tip.icon size={24} className="text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{tip.title}</h3>
-                <p className="text-muted-foreground text-sm">{tip.description}</p>
+      <section className="bg-white px-6 md:px-20 py-16">
+        <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-8 text-center tracking-tight">
+          Essential Tips
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tips.map((tip) => (
+            <div
+              key={tip.title}
+              className="bg-[#F3F4F6] rounded-xl p-6"
+            >
+              <div className="w-12 h-12 rounded-full bg-[#EEF2FF] flex items-center justify-center mb-4">
+                <tip.icon size={24} className="text-[#1B4FF0]" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-bold text-[#0D0E14] mb-2">{tip.title}</h3>
+              <p className="text-[#6B7280] text-sm leading-relaxed">{tip.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Metro Guide */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Doha Metro Guide</h2>
-              <p className="text-muted-foreground mb-6">
-                The Doha Metro is the fastest way to travel between stadiums.
-                Three lines cover all major destinations:
-              </p>
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div>
+            <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-4 tracking-tight">
+              Doha Metro Guide
+            </h2>
+            <p className="text-[#6B7280] mb-6 leading-relaxed">
+              The Doha Metro is the fastest way to travel between stadiums.
+              Three lines cover all major destinations:
+            </p>
 
-              <div className="space-y-4 mb-6">
-                {metroLines.map((line) => (
-                  <div key={line.name} className="flex items-center gap-3">
-                    <div className={`w-4 h-4 rounded-full ${line.color}`} />
-                    <div>
-                      <span className="font-medium">{line.name}:</span>{" "}
-                      <span className="text-muted-foreground">
-                        {line.description}
-                      </span>
-                    </div>
+            <div className="space-y-4 mb-6">
+              {metroLines.map((line) => (
+                <div key={line.name} className="flex items-center gap-3">
+                  <div className={`w-4 h-4 rounded-full ${line.color}`} />
+                  <div>
+                    <span className="font-semibold text-[#0D0E14]">{line.name}:</span>{" "}
+                    <span className="text-[#6B7280]">
+                      {line.description}
+                    </span>
                   </div>
-                ))}
-              </div>
-
-              <p className="text-sm text-muted-foreground">
-                Operating hours: 6:00 AM - 11:00 PM (extended on event days)
-              </p>
+                </div>
+              ))}
             </div>
 
-            <div className="relative aspect-video rounded-xl overflow-hidden">
-              <Image
-                src={travelGuideImages.metro}
-                alt="Doha Metro"
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            </div>
+            <p className="text-sm text-[#6B7280]">
+              Operating hours: 6:00 AM - 11:00 PM (extended on event days)
+            </p>
+          </div>
+
+          <div className="relative aspect-video rounded-xl overflow-hidden">
+            <Image
+              src={travelGuideImages.metro}
+              alt="Doha Metro"
+              fill
+              className="object-cover"
+              unoptimized
+            />
           </div>
         </div>
       </section>
 
       {/* FAQs */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
+      <section className="bg-white px-6 md:px-20 py-16">
+        <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-8 text-center tracking-tight">
+          Frequently Asked Questions
+        </h2>
 
-          <div className="max-w-2xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-xl border border-border overflow-hidden"
+        <div className="max-w-2xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-[#F3F4F6] rounded-xl overflow-hidden"
+            >
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full flex items-center justify-between p-4 text-left font-semibold text-[#0D0E14] hover:bg-[#E5E7EB]/50 transition-colors"
               >
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full flex items-center justify-between p-4 text-left font-medium hover:bg-muted/50 transition-colors"
-                >
-                  {faq.question}
-                  {openFaq === index ? (
-                    <ChevronUp size={20} className="text-muted-foreground" />
-                  ) : (
-                    <ChevronDown size={20} className="text-muted-foreground" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-4 pb-4 text-muted-foreground">
-                    {faq.answer}
-                  </div>
+                {faq.question}
+                {openFaq === index ? (
+                  <ChevronUp size={20} className="text-[#6B7280]" />
+                ) : (
+                  <ChevronDown size={20} className="text-[#6B7280]" />
                 )}
-              </div>
-            ))}
-          </div>
+              </button>
+              {openFaq === index && (
+                <div className="px-4 pb-4 text-[#6B7280] leading-relaxed">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Explore?</h2>
-          <p className="text-muted-foreground mb-8">
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-16">
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-4 tracking-tight">
+            Ready to Explore?
+          </h2>
+          <p className="text-[#6B7280] mb-8">
             Start your journey by discovering the amazing stadiums of Qatar!
           </p>
-          <Button asChild size="lg">
-            <Link href="/stadiums">View All Stadiums</Link>
-          </Button>
+          <Link
+            href="/stadiums"
+            className="inline-flex items-center gap-2 bg-[#1B4FF0] text-white text-[15px] font-semibold px-6 py-3 rounded-lg hover:bg-[#163DD0] transition-all hover:-translate-y-0.5"
+          >
+            View All Stadiums
+          </Link>
         </div>
       </section>
     </>

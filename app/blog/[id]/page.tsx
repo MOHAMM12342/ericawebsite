@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { getBlogPostById, blogPosts } from "@/lib/blog";
 
 interface BlogDetailPageProps {
@@ -38,23 +37,24 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   }
 
   return (
-    <article className="py-12">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <Button asChild variant="ghost" className="mb-8">
-          <Link href="/blog">
-            <ArrowLeft className="mr-2" size={16} /> Back to Blog
-          </Link>
-        </Button>
+    <article className="bg-[#F3F4F6]">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 py-12">
+        <Link
+          href="/blog"
+          className="inline-flex items-center text-[15px] font-semibold text-[#1B4FF0] hover:underline mb-8"
+        >
+          <ArrowLeft className="mr-2" size={16} /> Back to Blog
+        </Link>
 
         {/* Header */}
         <header className="mb-8">
-          <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 bg-[#EEF2FF] text-[#1B4FF0] rounded-full text-sm font-semibold mb-4">
             {post.category}
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-[#0D0E14] mb-4 text-balance tracking-tight">
             {post.title}
           </h1>
-          <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-[#6B7280]">
             <span className="flex items-center gap-2">
               <Calendar size={16} />
               {post.date}
@@ -80,17 +80,18 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
         {/* Content */}
         <div
-          className="prose prose-lg max-w-none prose-headings:font-semibold prose-p:text-muted-foreground prose-p:leading-relaxed"
+          className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#0D0E14] prose-p:text-[#6B7280] prose-p:leading-relaxed"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* Navigation */}
-        <div className="border-t border-border mt-12 pt-8">
-          <Button asChild>
-            <Link href="/blog">
-              <ArrowLeft className="mr-2" size={16} /> Back to All Posts
-            </Link>
-          </Button>
+        <div className="border-t border-[#E5E7EB] mt-12 pt-8">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 bg-[#1B4FF0] text-white text-[15px] font-semibold px-6 py-3 rounded-lg hover:bg-[#163DD0] transition-all"
+          >
+            <ArrowLeft size={16} /> Back to All Posts
+          </Link>
         </div>
       </div>
     </article>

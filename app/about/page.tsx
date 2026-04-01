@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Camera, BookOpen, Building2 } from "lucide-react";
-import { Hero } from "@/components/hero";
-import { Button } from "@/components/ui/button";
-import { heroImages, aboutImages } from "@/lib/images";
+import { aboutImages } from "@/lib/images";
 
 const stats = [
   { value: "30+", label: "Countries Visited" },
@@ -32,23 +30,30 @@ const activities = [
 export default function AboutPage() {
   return (
     <>
-      <Hero
-        title="About Me"
-        subtitle="Hi! I'm Erica, a travel blogger exploring Qatar's World Cup stadiums"
-        backgroundImage={heroImages.aboutPage}
-      />
+      {/* Hero Section */}
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-16">
+        <span className="inline-flex items-center bg-[#EEF2FF] border border-[#C7D4FB] text-[#1B4FF0] text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
+          About
+        </span>
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#0D0E14] mb-4">
+          About Me
+        </h1>
+        <p className="text-base font-normal text-[#6B7280] leading-relaxed max-w-xl">
+          Hi! I&apos;m Erica, a travel blogger exploring Qatar&apos;s World Cup stadiums.
+        </p>
+      </section>
 
       {/* Location Badge */}
-      <div className="flex justify-center -mt-6 relative z-10">
-        <span className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full shadow-sm">
-          <MapPin size={16} className="text-primary" />
-          <span className="text-sm font-medium">Currently in Doha, Qatar</span>
+      <div className="bg-[#F3F4F6] px-6 md:px-20 pb-8">
+        <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E5E7EB] rounded-full shadow-sm">
+          <MapPin size={16} className="text-[#1B4FF0]" />
+          <span className="text-sm font-medium text-[#0D0E14]">Currently in Doha, Qatar</span>
         </span>
       </div>
 
       {/* My Story */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-12">
+        <div className="bg-white rounded-2xl p-8 md:p-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square rounded-2xl overflow-hidden">
               <Image
@@ -61,8 +66,8 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-6">My Story</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-6 tracking-tight">My Story</h2>
+              <div className="space-y-4 text-[#6B7280] leading-relaxed">
                 <p>
                   I&apos;m Erica, a passionate travel blogger with a love for
                   exploring the world&apos;s most incredible destinations. My
@@ -90,10 +95,10 @@ export default function AboutPage() {
               <div className="flex gap-8 mt-8">
                 {stats.map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-3xl font-bold text-primary">
+                    <div className="text-3xl font-extrabold text-[#1B4FF0]">
                       {stat.value}
                     </div>
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                    <p className="text-sm text-[#6B7280]">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -103,61 +108,66 @@ export default function AboutPage() {
       </section>
 
       {/* What I Do */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">What I Do</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {activities.map((activity) => (
-              <div
-                key={activity.title}
-                className="bg-card rounded-xl p-6 text-center shadow-sm border border-border"
-              >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <activity.icon size={28} className="text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{activity.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {activity.description}
-                </p>
+      <section className="bg-white px-6 md:px-20 py-16">
+        <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-8 text-center tracking-tight">
+          What I Do
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {activities.map((activity) => (
+            <div
+              key={activity.title}
+              className="bg-[#F3F4F6] rounded-xl p-6 text-center"
+            >
+              <div className="w-16 h-16 rounded-full bg-[#EEF2FF] flex items-center justify-center mx-auto mb-4">
+                <activity.icon size={28} className="text-[#1B4FF0]" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-bold text-[#0D0E14] mb-2">{activity.title}</h3>
+              <p className="text-sm text-[#6B7280] leading-relaxed">
+                {activity.description}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Photo Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {aboutImages.gallery.map((image, index) => (
-              <div
-                key={index}
-                className="relative aspect-square rounded-xl overflow-hidden"
-              >
-                <Image
-                  src={image}
-                  alt={`Gallery image ${index + 1}`}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
+      <section className="bg-[#F3F4F6] px-6 md:px-20 py-16">
+        <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-8 text-center tracking-tight">
+          Photo Gallery
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          {aboutImages.gallery.map((image, index) => (
+            <div
+              key={index}
+              className="relative aspect-square rounded-xl overflow-hidden"
+            >
+              <Image
+                src={image}
+                alt={`Gallery image ${index + 1}`}
+                fill
+                className="object-cover hover:scale-105 transition-transform"
+                unoptimized
+              />
+            </div>
+          ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Explore?</h2>
-          <p className="text-muted-foreground mb-8">
+      <section className="bg-white px-6 md:px-20 py-16">
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold text-[#0D0E14] mb-4 tracking-tight">
+            Ready to Explore?
+          </h2>
+          <p className="text-[#6B7280] mb-8">
             Check out my stadium guides and start planning your trip to Qatar!
           </p>
-          <Button asChild size="lg">
-            <Link href="/stadiums">View Stadiums</Link>
-          </Button>
+          <Link
+            href="/stadiums"
+            className="inline-flex items-center gap-2 bg-[#1B4FF0] text-white text-[15px] font-semibold px-6 py-3 rounded-lg hover:bg-[#163DD0] transition-all hover:-translate-y-0.5"
+          >
+            View Stadiums
+          </Link>
         </div>
       </section>
     </>

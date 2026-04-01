@@ -1,81 +1,35 @@
 import Link from "next/link";
 
+const footerLinks = [
+  { href: "/stadiums", label: "Stadiums" },
+  { href: "/travel-guide", label: "Travel Guide" },
+  { href: "/blog", label: "Blog" },
+  { href: "/about", label: "About" },
+];
+
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <h3 className="text-xl font-semibold mb-4">Erica Travels Qatar</h3>
-            <p className="text-background/70 max-w-md">
-              A travel blog documenting the amazing stadiums of the 2022 FIFA
-              World Cup in Qatar. Discover architecture, travel tips, and
-              personal experiences.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-background/70 hover:text-background transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/stadiums"
-                  className="text-background/70 hover:text-background transition-colors"
-                >
-                  Stadiums
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-background/70 hover:text-background transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/travel-guide"
-                  className="text-background/70 hover:text-background transition-colors"
-                >
-                  Travel Guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-background/70 hover:text-background transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-background/70">
-              <li>Doha, Qatar</li>
-              <li>erica@travels.qa</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70">
-          <p>
-            Website Designer: Suhail Jaber | Year 11 | Doha, Qatar | All Rights
-            Reserved &copy;
-          </p>
-        </div>
+    <footer className="bg-white border-t border-[#E5E7EB] px-6 md:px-20 pt-8 pb-6">
+      <div className="flex flex-col md:flex-row items-center justify-between pb-6 border-b border-[#E5E7EB] mb-5 gap-4">
+        <span className="text-lg font-extrabold text-[#1B4FF0]">
+          Erica Travels Qatar
+        </span>
+        <ul className="flex gap-6 md:gap-9 list-none flex-wrap justify-center">
+          {footerLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className="text-sm font-medium text-[#6B7280] hover:text-[#0D0E14] transition-colors"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
+      <p className="text-[13px] font-medium text-[#6B7280] text-center">
+        Website Designer: Suhail Jaber | Year 11 | Doha, Qatar | All Rights Reserved &copy;
+      </p>
     </footer>
   );
 }
