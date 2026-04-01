@@ -21,10 +21,10 @@ export const stadiumCardImages: Record<string, string> = {
   "al-bayt": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200",
   "al-janoub": "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a8?q=80&w=1200",
   "ahmad-bin-ali": "https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1200",
-  "khalifa-international": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200",
-  "stadium-974": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200",
-  "education-city": "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=1200",
-  "al-thumama": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200",
+  "khalifa-international": "https://www.leisureopportunities.co.uk/images/HIGH499644_662599.jpg",
+  "stadium-974": "https://www.sbp.de/app/uploads/2023/02/DJI_0701-Edit-Edit_MAX-1920x1280.jpg",
+  "education-city": "https://tiso-turnstiles.com/images/news/case-studies/case-study-education-city-stadium-001.jpg",
+  "al-thumama": "https://arquitecturaviva.com/assets/uploads/obras/54775/av_235083.webp?h=bfe0bb96",
 };
 
 /**
@@ -46,18 +46,18 @@ export const stadiumCardImagesOrdered: string[] = [
 
 export const stadiumGalleryImages: Record<string, [string, string, string]> = {
   lusail: [
-    "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200",
+    "https://www.afl-architects.com/cms/images/_1920x1440_crop_center-center_line/32471/afd33d25-1437-484d-84fd-c9c5ab2b741c.jpg",
     "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=1200",
     "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200",
   ],
   "al-bayt": [
     "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200",
     "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200",
-    "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a8?q=80&w=1200",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Al_Bayt_Stadium_-_panoramio.jpg/1280px-Al_Bayt_Stadium_-_panoramio.jpg",
   ],
   "al-janoub": [
-    "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a8?q=80&w=1200",
-    "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200",
+    "https://www.scia.net/sites/default/files/styles/itr_basic_full/public/images/2022-03/header_AlJanoubStadium_1920x745_0.jpg?itok=eglV695w",
+    "https://upload.wikimedia.org/wikipedia/commons/a/a3/Al_Janoub_Stadium.jpg",
     "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200",
   ],
   "ahmad-bin-ali": [
@@ -68,12 +68,12 @@ export const stadiumGalleryImages: Record<string, [string, string, string]> = {
   "khalifa-international": [
     "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200",
     "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=1200",
-    "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200",
+    "https://www.aljazeera.com/wp-content/uploads/2022/08/DSC02975-1.jpg?w=770&resize=770%2C513&quality=80",
   ],
   "stadium-974": [
     "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200",
     "https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1200",
-    "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a8?q=80&w=1200",
+    "https://www.avc-group.com/assets/references/974-Stadium/ReferenceAVCGroup974Stadium5__FillWzc0MCw1NTVd.jpg",
   ],
   "education-city": [
     "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=1200",
@@ -81,7 +81,7 @@ export const stadiumGalleryImages: Record<string, [string, string, string]> = {
     "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200",
   ],
   "al-thumama": [
-    "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200",
+    "https://www.thorntontomasetti.com/sites/default/files/styles/paragraph_slideshow/public/al-thumama-26.jpg?itok=kH6QNJmc",
     "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200",
     "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200",
   ],
