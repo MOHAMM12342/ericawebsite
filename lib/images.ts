@@ -53,7 +53,7 @@ export const stadiumGalleryImages: Record<string, [string, string, string]> = {
   "al-bayt": [
     "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200",
     "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1200",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Al_Bayt_Stadium_-_panoramio.jpg/1280px-Al_Bayt_Stadium_-_panoramio.jpg",
+    "https://www.one-works.com/wp-content/uploads/AL-BAY2-1024x682.jpg",
   ],
   "al-janoub": [
     "https://www.scia.net/sites/default/files/styles/itr_basic_full/public/images/2022-03/header_AlJanoubStadium_1920x745_0.jpg?itok=eglV695w",
