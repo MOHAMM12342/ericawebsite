@@ -66,51 +66,19 @@ export default function HomePage() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden aspect-[16/11] bg-[#0E1220] relative">
-            {/* Stadium tunnel SVG illustration */}
-            <svg viewBox="0 0 700 490" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" className="w-full h-full absolute inset-0">
-              <defs>
-                <linearGradient id="tunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: "#0a0d18" }} />
-                  <stop offset="100%" style={{ stopColor: "#111827" }} />
-                </linearGradient>
-                <radialGradient id="pitchGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" style={{ stopColor: "#16a34a", stopOpacity: 0.9 }} />
-                  <stop offset="100%" style={{ stopColor: "#065f46", stopOpacity: 0.4 }} />
-                </radialGradient>
-              </defs>
-              <rect width="700" height="490" fill="url(#tunGrad)" />
-              <polygon points="0,0 220,120 220,370 0,490" fill="#1a1c28" />
-              <polygon points="220,120 280,160 280,330 220,370" fill="#151722" />
-              <polygon points="700,0 480,120 480,370 700,490" fill="#1a1c28" />
-              <polygon points="480,120 420,160 420,330 480,370" fill="#151722" />
-              <polygon points="0,0 700,0 480,120 220,120" fill="#12141f" />
-              <polygon points="0,490 700,490 480,370 220,370" fill="#0d0f1a" />
-              <ellipse cx="350" cy="245" rx="135" ry="95" fill="url(#pitchGlow)" />
-              <rect x="220" y="160" width="260" height="165" fill="url(#pitchGlow)" rx="4" />
-              <rect x="230" y="200" width="240" height="115" fill="#15803d" opacity="0.85" />
-              <line x1="350" y1="200" x2="350" y2="315" stroke="white" strokeWidth="1.5" opacity="0.5" />
-              <ellipse cx="350" cy="257" rx="40" ry="28" fill="none" stroke="white" strokeWidth="1.5" opacity="0.5" />
-              <g opacity="0.35">
-                <rect x="30" y="140" width="18" height="60" fill="#dc2626" rx="2" />
-                <ellipse cx="39" cy="135" rx="10" ry="10" fill="#dc2626" />
-                <rect x="70" y="155" width="16" height="55" fill="#dc2626" rx="2" />
-                <ellipse cx="78" cy="150" rx="9" ry="9" fill="#dc2626" />
-                <rect x="108" y="160" width="15" height="52" fill="#dc2626" rx="2" />
-                <rect x="145" y="165" width="14" height="50" fill="#dc2626" rx="2" />
-                <rect x="178" y="168" width="14" height="48" fill="#dc2626" rx="2" />
-                <rect x="652" y="140" width="18" height="60" fill="#dc2626" rx="2" />
-                <ellipse cx="661" cy="135" rx="10" ry="10" fill="#dc2626" />
-                <rect x="614" y="155" width="16" height="55" fill="#dc2626" rx="2" />
-                <rect x="577" y="160" width="15" height="52" fill="#dc2626" rx="2" />
-                <rect x="543" y="165" width="14" height="50" fill="#dc2626" rx="2" />
-                <rect x="508" y="168" width="14" height="48" fill="#dc2626" rx="2" />
-              </g>
-              <polygon points="0,490 700,490 480,370 220,370" fill="#090b14" opacity="0.6" />
-              <line x1="350" y1="370" x2="350" y2="490" stroke="#16a34a" strokeWidth="1" opacity="0.2" />
-              <line x1="250" y1="30" x2="310" y2="120" stroke="#ffffff" strokeWidth="1" opacity="0.07" />
-              <line x1="350" y1="20" x2="350" y2="120" stroke="#ffffff" strokeWidth="1.5" opacity="0.1" />
-              <line x1="450" y1="30" x2="390" y2="120" stroke="#ffffff" strokeWidth="1" opacity="0.07" />
-            </svg>
+            import Image from "next/image";
+
+            <div className="rounded-2xl overflow-hidden aspect-[16/11] bg-[#0E1220] relative">
+              <Image
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/a1/4c/f5/caption.jpg?w=1200&h=-1&s=1"
+                alt="Qatar Stadium"
+                fill
+                className="inline-flex items-center bg-white text-[#0D0E14] text-[15px] font-semibold px-6 py-3 rounded-lg border-[1.5px] border-[#E5E7EB] hover:border-[#999] transition-all hover:-translate-y-0.5"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
+
           </div>
         </div>
       </section>
