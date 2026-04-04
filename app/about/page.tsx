@@ -36,7 +36,7 @@ export default function AboutPage() {
           About
         </span>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#0D0E14] mb-4">
-          About Me
+          About Erica
         </h1>
         <p className="text-base font-normal text-[#6B7280] leading-relaxed max-w-xl">
           Hi! I&apos;m Erica, a travel blogger exploring Qatar&apos;s World Cup stadiums.
