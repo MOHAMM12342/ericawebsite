@@ -5,7 +5,7 @@ const footerLinks = [
   { href: "/travel-guide", label: "Travel Guide" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact Erica" },
+  { href: "/contact-erica", label: "Contact Erica" },
 ];
 
 export function Footer() {
