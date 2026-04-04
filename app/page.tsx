@@ -65,21 +65,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden aspect-[16/11] bg-[#0E1220] relative">
-            import Image from "next/image";
 
-            <div className="rounded-2xl overflow-hidden aspect-[16/11] bg-[#0E1220] relative">
-              <Image
-                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/a1/4c/f5/caption.jpg?w=1200&h=-1&s=1"
-                alt="Qatar Stadium"
-                fill
-                className="inline-flex items-center bg-white text-[#0D0E14] text-[15px] font-semibold px-6 py-3 rounded-lg border-[1.5px] border-[#E5E7EB] hover:border-[#999] transition-all hover:-translate-y-0.5"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
-            </div>
-
-          </div>
         </div>
       </section>
 
