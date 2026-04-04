@@ -5,6 +5,7 @@ const footerLinks = [
   { href: "/travel-guide", label: "Travel Guide" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact Erica" },
 ];
 
 export function Footer() {
@@ -14,12 +15,15 @@ export function Footer() {
         <span className="text-lg font-extrabold text-[#1B4FF0]">
           Erica Travels Qatar
         </span>
-        <ul className="flex gap-6 md:gap-9 list-none flex-wrap justify-center">
+        <ul className="flex gap-6 md:gap-9 list-none flex-wrap justify-center items-center">
           {footerLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-[#6B7280] hover:text-[#0D0E14] transition-colors"
+                className={`text-sm font-medium transition-colors hover:text-[#0D0E14] ${link.href === "/app/contact-erica"
+                  ? "text-[#1B4FF0] hover:text-[#163DD0] font-semibold"
+                  : "text-[#6B7280]"
+                  }`}
               >
                 {link.label}
               </Link>

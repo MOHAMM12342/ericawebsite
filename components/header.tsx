@@ -24,21 +24,31 @@ export function Header() {
       </Link>
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex gap-10 list-none">
+      <ul className="hidden md:flex gap-10 list-none items-center">
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className={`text-[15px] font-medium transition-colors hover:text-[#1B4FF0] ${
-                pathname === link.href
-                  ? "text-[#1B4FF0]"
-                  : "text-[#0D0E14] opacity-80"
-              }`}
+              className={`text-[15px] font-medium transition-colors hover:text-[#1B4FF0] ${pathname === link.href
+                ? "text-[#1B4FF0]"
+                : "text-[#0D0E14] opacity-80"
+                }`}
             >
               {link.label}
             </Link>
           </li>
         ))}
+        <li>
+          <Link
+            href="/contact"
+            className={`text-[15px] font-semibold px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 ${pathname === "/contact erica"
+              ? "bg-[#163DD0] text-white"
+              : "bg-[#1B4FF0] text-white hover:bg-[#163DD0]"
+              }`}
+          >
+            Contact Erica
+          </Link>
+        </li>
       </ul>
 
       {/* Mobile Menu Button */}
@@ -62,17 +72,28 @@ export function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`block px-6 py-3 text-[15px] font-medium transition-colors hover:bg-[#F3F4F6] ${
-                    pathname === link.href
-                      ? "text-[#1B4FF0]"
-                      : "text-[#0D0E14] opacity-80"
-                  }`}
+                  className={`block px-6 py-3 text-[15px] font-medium transition-colors hover:bg-[#F3F4F6] ${pathname === link.href
+                    ? "text-[#1B4FF0]"
+                    : "text-[#0D0E14] opacity-80"
+                    }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
+            <li className="px-6 pt-2 pb-1">
+              <Link
+                href="/contact"
+                className={`block text-center py-2.5 text-[15px] font-semibold rounded-lg transition-colors ${pathname === "/contact"
+                  ? "bg-[#163DD0] text-white"
+                  : "bg-[#1B4FF0] text-white hover:bg-[#163DD0]"
+                  }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact Erica
+              </Link>
+            </li>
           </ul>
         </div>
       )}
