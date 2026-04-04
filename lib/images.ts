@@ -6,6 +6,10 @@
 
 // ─── Hero / Page Backgrounds ─────────────────────────────────────────────────
 
+import portrait from "./illustration-58174-writing-noting-something-concept-softness-elegance--thumbnail (1).webp";
+
+
+
 export const heroImages = {
   home: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?q=80&w=2940",
   stadiumsPage: "https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=2940",
@@ -129,7 +133,7 @@ export const blogHeroImages: Record<string, string> = {
 // ─── About Page ───────────────────────────────────────────────────────────────
 
 export const aboutImages = {
-  portrait: "https://thewanderingquinn.com/wp-content/uploads/2023/01/IMG_3765-1440x1080.jpg",
+  portrait,
   portraitSmall: "https://thewanderingquinn.com/wp-content/uploads/2023/01/IMG_3765-1440x1080.jpg",
   gallery: [
     "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=600",
