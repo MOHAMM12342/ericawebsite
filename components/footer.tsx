@@ -19,8 +19,8 @@ export function Footer() {
           {footerLinks.map((link) => (
             <li key={link.href}>
               <Link
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#0D0E14] ${link.href === "/app/contact-erica"
+                href={"/contact-erica"}
+                className={`text-sm font-medium transition-colors hover:text-[#0D0E14] ${link.href === "/contact"
                   ? "text-[#1B4FF0] hover:text-[#163DD0] font-semibold"
                   : "text-[#6B7280]"
                   }`}

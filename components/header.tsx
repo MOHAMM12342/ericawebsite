@@ -40,8 +40,8 @@ export function Header() {
         ))}
         <li>
           <Link
-            href="/contact"
-            className={`text-[15px] font-semibold px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 ${pathname === "/contact erica"
+            href="/contact-erica"
+            className={`text-[15px] font-semibold px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 ${pathname === "/contact"
               ? "bg-[#163DD0] text-white"
               : "bg-[#1B4FF0] text-white hover:bg-[#163DD0]"
               }`}
