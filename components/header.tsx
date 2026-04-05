@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/stadiums", label: "Stadiums" },
   { href: "/travel-guide", label: "Travel Guide" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Erica" },
 ];
 
 export function Header() {
